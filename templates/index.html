@@ -1,0 +1,58 @@
+<!DOCTYPE html>{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  		<title>Welcome!</title>
+<!-- 
+
+Highway Template
+
+https://templatemo.com/tm-520-highway
+
+-->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.jpg">
+
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css'  %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css'  %}">
+        <link rel="stylesheet" href="{% static 'css/fontAwesome.css'  %}">
+        <link rel="stylesheet" href="{% static 'css/light-box.css'  %}">
+        <link rel="stylesheet" href="{% static 'css/templatemo-style.css' %}">
+
+        <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+
+    <body>
+
+        <nav>
+            <div class="logo">
+                <a href="https://www.linkedin.com/in/maureen-ononiwu-49b3b212a/">Created by<em>Ononiwu Maureen</em></a>
+            </div>
+        </nav>
+
+        <div id="video-container">
+            <div class="video-overlay"></div>
+            <div class="video-content">
+                <div class="inner">
+                        <form method="post"  STYLE='color=#ffffff'>
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-success">Submit</button>
+                            <b STYLE='color=#ffffff'>You can't see the text right? It is a feature </b>
+                            <p><a href="#scroll"> <em> scroll down for credits, please </em></a></p>
+                        </form>
+                </div>   
+            </div>
+            <video autoplay loop muted>
+                <source src="{% static 'welcome1.mp4' %}" type="video/mp4" />
+            </video>
+        </div>
+           <p id='scroll'><a href="https://www.pexels.com/video/women-posing-close-to-each-other-4723075/"> Video by <em> olia danilevich </em> from <em> Pexels </em></a></p>
+            <p><a href="https://www.free-css.com/free-css-templates">Template from <em> freecss.com </em></a></p>
+    </body>
+</html>
