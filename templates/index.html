@@ -28,6 +28,7 @@ https://templatemo.com/tm-520-highway
     </head>
 
     <body>
+        {% load crispy_forms_tags %}
 
         <nav>
             <div class="logo">
@@ -41,7 +42,7 @@ https://templatemo.com/tm-520-highway
                 <div class="inner">
                         <form method="post"  STYLE='color=#ffffff'>
                             {% csrf_token %}
-                            {{ form.as_p }}
+                            {{ form | crispy }}
                             <button type="submit" class="btn btn-success">Submit</button>
                             <b STYLE='color=#ffffff'>You can't see the text right? It is a feature </b>
                             <p><a href="#scroll"> <em> scroll down for credits, please </em></a></p>
