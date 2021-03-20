@@ -8,10 +8,10 @@ pipeline {
         }
 	    stage('Enable virtual environment') {     
             steps {        
-                sh 'source venv/Scripts/activate'
+                sh 'source env/bin/activate'
             }
         }
-        stage('Test on Windows') {
+        stage('Test') {
             steps {
                 sh 'python manage.py test'
             }
