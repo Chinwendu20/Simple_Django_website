@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Test on Windows') {
             steps {
-                sh 'git branch -a'
+                sh 'git pull origin '
             }
         }
     }
