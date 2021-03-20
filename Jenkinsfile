@@ -1,19 +1,19 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Change Directory') {
             steps {
                 sh 'cd /home/amaka013/Simple_Django_website'
             }
         }
-	    stage('Test on Linux') {     
+	    stage('Enable virtual environment') {     
             steps {        
-                sh 'git fetch'
+                sh 'source venv/Scripts/activate'
             }
         }
         stage('Test on Windows') {
             steps {
-                sh 'git pull origin main'
+                sh 'python manage.py test'
             }
         }
     }
