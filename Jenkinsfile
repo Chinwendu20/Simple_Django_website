@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Test ') {
+        stage('Change ') {
             steps {
 		    script { dir ('/home/amaka013/Simple_Django_website'){
 			    pwd
