@@ -4,20 +4,14 @@ pipeline {
         stage('Change ') {
             steps {
 		    script { dir ('/home/amaka013/Simple_Django_website'){
-			    pwd
+			    sh 'source venv/bin/activate'
+			    sh 'python manage.py test'
+			   
 		    }
 			    
 			   }
             }
 	}
-	 stage('Test ') {
-            steps {
-			    sh 'source env/bin/activate'
-			    sh 'python manage.py test'
-		    }
-			    
-			   
-            
-        }
+	
     }
 }
