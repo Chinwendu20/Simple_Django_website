@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Change ') {
             steps {
-		sh 'source venv/bin/activate'
+		sh 'source /home/amaka013/welcome-123-ii/venv/bin/activate'
 		sh 'python manage.py test'
             }
 	}
