@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Test') {
+        stage('Test ') {
             steps {
 		    script { dir ('/home/amaka013/Simple_Django_website'){
 			    sh 'source env/bin/activate'
