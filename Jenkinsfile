@@ -9,9 +9,11 @@ pipeline {
 		
             }
 	 stage('Change34 ') {
-		 script { dir ('/home/amaka013/Simple_Django_website/'){
-		 sh 'python manage.py test'
+		 steps{
+		 	script { dir ('/home/amaka013/Simple_Django_website/'){
+		 	sh 'python manage.py test'
 		 }
+			       }
             }
 	}
 	
