@@ -8,6 +8,7 @@ pipeline {
 		sh 'pwd'
 		
             }
+	}
 	 stage('Change34 ') {
 		 steps{
 		 	script { dir ('/home/amaka013/Simple_Django_website/'){
