@@ -4,6 +4,7 @@ pipeline {
         stage('Change Directory') {
             steps {
                 sh 'cd /home/amaka013/Simple_Django_website'
+		sh 'pwd'
             }
         }
 	    stage('Enable virtual environment') {     
