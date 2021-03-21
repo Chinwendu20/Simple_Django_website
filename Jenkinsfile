@@ -10,6 +10,15 @@ pipeline {
 			    
 			   }
             }
+	}
+	 stage('Test ') {
+            steps {
+			    sh 'source env/bin/activate'
+			    sh 'python manage.py test'
+		    }
+			    
+			   
+            
         }
     }
 }
